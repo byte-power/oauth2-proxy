@@ -274,9 +274,9 @@ func buildSignInMessage(opts *options.Options) string {
 		}
 	} else if len(opts.EmailDomains) != 0 && opts.AuthenticatedEmailsFile == "" {
 		if len(opts.EmailDomains) > 1 {
-			msg = fmt.Sprintf("Authenticate using one of the following domains: %v", strings.Join(opts.EmailDomains, ", "))
+			msg = fmt.Sprintf("Authenticate using Azure")
 		} else if opts.EmailDomains[0] != "*" {
-			msg = fmt.Sprintf("Authenticate using %v", opts.EmailDomains[0])
+			msg = fmt.Sprintf("Authenticate using Azure")
 		}
 	}
 	return msg
